@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargez Notre Application</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                // Redirection vers le Google Play Store
+                window.location.href = "https://play.google.com/store/apps/details?id=uk.co.asapp.security&hl=ln";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Redirection vers l'Apple App Store
+                window.location.href = "https://apps.apple.com/app/id1590853733";
+            } else {
+                // Redirection vers une page d'information ou un site web
+                window.location.href = "https://www.securityasapp.london";
+            }
+        });
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .message {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .message p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <p>Redirection en cours vers le store approprié...</p>
+    </div>
+</body>
+</html>
